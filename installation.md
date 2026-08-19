@@ -70,3 +70,10 @@ Le code source est versionné avec Git.
 Les commits permettent de conserver l'historique des modifications réalisées sur le projet.
 
 Une copie distante du dépôt est conservée sur GitHub.
+
+## Vérification de l'environnement
+
+Un script PowerShell permet de vérifier rapidement l'environnement local :
+
+```powershell
+.\scripts\check-environment.ps1
