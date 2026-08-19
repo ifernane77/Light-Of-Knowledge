@@ -62,3 +62,11 @@ Le projet peut être lancé localement avec :
 
 ```powershell
 php -S localhost:8000
+
+## Sauvegarde du projet
+
+Le code source est versionné avec Git.
+
+Les commits permettent de conserver l'historique des modifications réalisées sur le projet.
+
+Une copie distante du dépôt est conservée sur GitHub.
