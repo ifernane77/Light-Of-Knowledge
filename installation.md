@@ -25,27 +25,63 @@ Puis accéder au dossier du projet :
 cd Light-Of-Knowledge
 ```
 
-## Lancement en local
+## Structure actuelle
 
-Le projet est développé et testé dans un environnement local.
+Le site public actuellement développé se trouve dans le dossier `public/`.
 
-Le fichier d'entrée principal de l'application est :
+Le fichier principal de l'interface publique est :
 
 ```text
-index.php
+public/index.html
 ```
 
-L'environnement local doit permettre au serveur web d'interpréter les fichiers PHP.
+Les autres pages principales sont :
 
-## Vérification
+```text
+public/formations.html
+public/inscription.html
+public/connexion.html
+```
 
-Une fois l'environnement configuré, ouvrir l'application dans le navigateur.
+Le fichier `index.php` situé à la racine du projet est actuellement conservé comme page de vérification de l'environnement PHP. Il n'est pas encore relié au site public.
 
-La page d'accueil doit s'afficher correctement et confirmer que PHP fonctionne.
+## Lancement du site public
+
+Pour la partie HTML/CSS actuelle, le site peut être ouvert directement dans le navigateur à partir de :
+
+```text
+public/index.html
+```
+
+Il est également possible d'utiliser un serveur local.
+
+## Test de PHP
+
+Pour vérifier l'environnement PHP depuis la racine du projet :
+
+```powershell
+php -S localhost:8000
+```
+
+Puis ouvrir :
+
+```text
+http://localhost:8000
+```
+
+Cette adresse affiche actuellement la page de test `index.php` placée à la racine.
 
 ## Base de données
 
-La base de données MySQL sera configurée ultérieurement lorsque cette notion aura été étudiée dans la formation.
+MySQL est disponible dans l'environnement local via Laragon.
+
+La base de données applicative et les traitements associés seront intégrés ultérieurement au rythme des notions étudiées et des besoins du projet.
+
+## Formulaires
+
+Les formulaires d'inscription et de connexion présents dans `public/` sont actuellement des interfaces front-end.
+
+Ils utilisent encore `action="#"` et ne sont donc pas reliés à un traitement PHP ni à une base de données.
 
 ## Environnement local utilisé
 
@@ -54,15 +90,8 @@ La base de données MySQL sera configurée ultérieurement lorsque cette notion 
 - Laragon
 - Visual Studio Code
 - Git
+- GitHub
 - Navigateur web
-
-## Test de PHP
-
-Le projet peut être lancé localement avec :
-
-```powershell
-php -S localhost:8000
-```
 
 ## Sauvegarde du projet
 
