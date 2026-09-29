@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Inscription à Light of Knowledge Institute France."
+    />
+
+    <title>Inscription | Light of Knowledge Institute France</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header id="site-header" class="site-header">
+      <div class="header-container">
+        <a href="index.html" class="site-logo-link">
+          <img
+            src="images/logo.png"
+            alt="Logo Light of Knowledge Institute"
+            class="site-logo"
+          />
+        </a>
+
+        <nav
+          id="main-navigation"
+          class="main-navigation"
+          aria-label="Navigation principale"
+        >
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="index.html" class="navigation-link"> Accueil </a>
+            </li>
+
+            <li class="navigation-item">
+              <a href="formations.html" class="navigation-link"> Formations </a>
+            </li>
+
+            <li class="navigation-item">
+              <a href="connexion.html" class="navigation-link"> Connexion </a>
+            </li>
+
+            <li class="navigation-item">
+              <a
+                href="inscription.html"
+                class="navigation-link navigation-link-button active"
+              >
+                Inscription
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="registration" class="form-page">
+        <div class="form-page-container">
+          <div class="form-heading">
+            <p class="form-subtitle">Rejoignez-nous</p>
+
+            <h1 class="form-title">Inscription</h1>
+
+            <p class="form-description">
+              Créez votre compte afin de vous inscrire aux formations proposées
+              par l'institut et d'accéder progressivement à votre espace
+              étudiant.
+            </p>
+          </div>
+
+          <form
+            id="registration-form"
+            class="user-form"
+            action="#"
+            method="post"
+          >
+            <!-- PRÉNOM -->
+            <div class="form-group">
+              <label for="firstname" class="form-label"> Prénom </label>
+
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                class="form-input"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <!-- NOM -->
+            <div class="form-group">
+              <label for="lastname" class="form-label"> Nom </label>
+
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                class="form-input"
+                autocomplete="family-name"
+                required
+              />
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+              <label for="email" class="form-label"> Adresse e-mail </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <!-- TÉLÉPHONE -->
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                Numéro de téléphone
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                autocomplete="tel"
+              />
+            </div>
+
+            <!-- MOT DE PASSE -->
+            <div class="form-group">
+              <label for="password" class="form-label"> Mot de passe </label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-input"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+
+            <!-- CONFIRMATION -->
+            <div class="form-group">
+              <label for="password-confirmation" class="form-label">
+                Confirmation du mot de passe
+              </label>
+
+              <input
+                type="password"
+                id="password-confirmation"
+                name="password_confirmation"
+                class="form-input"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+
+            <!-- FORMATION -->
+            <div class="form-group">
+              <label for="formation" class="form-label">
+                Formation souhaitée
+              </label>
+
+              <select id="formation" name="formation" class="form-select">
+                <option value="">Choisissez une formation</option>
+
+                <option value="essentiels-option-1">
+                  Les Essentiels de l'Islam — Option 1
+                </option>
+
+                <option value="essentiels-option-2">
+                  Les Essentiels de l'Islam — Option 2
+                </option>
+
+                <option value="caractere-islamique">
+                  Développer un caractère islamique
+                </option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="submit"
+                id="registration-submit"
+                class="button button-primary"
+              >
+                Créer mon compte
+              </button>
+            </div>
+          </form>
+
+          <div class="form-footer">
+            <p>
+              Vous possédez déjà un compte ?
+              <a href="connexion.html" class="form-link"> Se connecter </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+      <div class="footer-bottom">
+        <p>
+          © 2026 Light of Knowledge Institute France — Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

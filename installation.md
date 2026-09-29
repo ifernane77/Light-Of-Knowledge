@@ -62,6 +62,7 @@ Le projet peut être lancé localement avec :
 
 ```powershell
 php -S localhost:8000
+```
 
 ## Sauvegarde du projet
 
@@ -77,3 +78,4 @@ Un script PowerShell permet de vérifier rapidement l'environnement local :
 
 ```powershell
 .\scripts\check-environment.ps1
+```
