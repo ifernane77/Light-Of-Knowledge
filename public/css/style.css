@@ -181,7 +181,7 @@ ul {
     font-weight: 600;
 
     text-align: center;
-
+    
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
@@ -190,6 +190,7 @@ ul {
 
 .button:hover {
     transform: translateY(-2px);
+    transform: scale(1.15);
 }
 
 .button-primary {
@@ -200,6 +201,12 @@ ul {
 .button-primary:hover {
     background-color: #b68a32;
     color: #ffffff;
+}
+
+.formation-card-content .button {
+    display: block;
+    width: fit-content;
+    margin: auto auto 0;
 }
 
 .button-secondary {
@@ -466,6 +473,8 @@ ul {
 }
 
 .formation-card {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 
     background-color: #ffffff;
@@ -490,6 +499,9 @@ ul {
 
 .formation-card-content {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .formation-category {
