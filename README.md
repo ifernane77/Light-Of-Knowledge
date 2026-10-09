@@ -123,3 +123,18 @@ Le fichier `index.php` situé à la racine correspond actuellement à une page d
 La première version de l'interface publique HTML/CSS est opérationnelle.
 
 Les formulaires d'inscription et de connexion sont pour l'instant uniquement des interfaces front-end : leur traitement côté serveur sera développé ultérieurement.
+
+## Périmètre E6 et feuille de route (session 2027)
+
+**Positionnement : seconde réalisation E6 envisagée**, sous réserve de disposer d'une application fonctionnelle, démontrable et suffisamment documentée pour l'épreuve. Ce projet reste également un projet personnel destiné à évoluer au-delà du BTS.
+
+**État confirmé à ce stade :** l'interface publique HTML/CSS responsive est opérationnelle ; les pages d'inscription et de connexion sont des formulaires front-end, sans authentification réelle.
+
+### MVP applicatif visé (à développer)
+
+1. **Persistance :** créer le schéma MySQL nécessaire pour les comptes, formations et inscriptions.
+2. **Traitements serveur :** connecter les formulaires au back-end PHP, valider les données et mettre en place l'authentification et les sessions.
+3. **Droits d'accès :** gérer les inscriptions et distinguer les accès aux formations gratuites et payantes selon les droits des élèves, sans multiplier artificiellement les rôles.
+4. **Qualité et preuves :** documenter l'installation, vérifier les principaux scénarios par des tests et conserver des captures de l'application réellement fonctionnelle.
+
+Les tableaux de bord complets, les cours, les replays et les fonctions avancées restent dans la feuille de route ultérieure ; ils ne sont pas annoncés comme terminés. PHP/MySQL seront intégrés progressivement selon les notions étudiées dans la formation BTS SIO SLAM suivie à distance via Studi.
