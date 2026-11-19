@@ -138,3 +138,11 @@ Les formulaires d'inscription et de connexion sont pour l'instant uniquement des
 4. **Qualité et preuves :** documenter l'installation, vérifier les principaux scénarios par des tests et conserver des captures de l'application réellement fonctionnelle.
 
 Les tableaux de bord complets, les cours, les replays et les fonctions avancées restent dans la feuille de route ultérieure ; ils ne sont pas annoncés comme terminés. PHP/MySQL seront intégrés progressivement selon les notions étudiées dans la formation BTS SIO SLAM suivie à distance via Studi.
+
+## Extension cible — application mobile Flutter (élève)
+
+Après stabilisation du socle Web PHP/MySQL et des API, une **application mobile Flutter/Dart** complète sur le périmètre **élève** sera développée pour Android (iOS envisageable selon l'environnement disponible). Elle partagera les comptes, inscriptions, droits d'accès, cours et progressions avec le site Web, via une **API PHP sécurisée** et une base commune. Elle ne sera pas un simple site dans une WebView.
+
+**Parcours mobile cible :** découvrir les formations → créer un compte / se connecter → consulter les inscriptions et droits → accéder aux cours autorisés → lire les leçons et ressources compatibles → marquer une leçon comme terminée → retrouver sa progression synchronisée. Les formations payantes respectent les droits d'inscription ; aucun paiement mobile intégré n'est requis pour le périmètre BTS. Les fonctions professeur/administrateur, examens, remise de devoirs, notifications et messagerie restent principalement Web ou ultérieures.
+
+**Statut :** Flutter, API, authentification, base de données et progression ne sont **pas encore réalisés**. Le développement sera engagé après les cours Studi correspondants et un MVP Web opérationnel. Voir [feuille de route mobile](feuille-de-route-mobile.md). Cette extension complète la seconde réalisation E6, sans constituer une troisième réalisation indépendante.
