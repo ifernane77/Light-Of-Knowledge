@@ -136,3 +136,39 @@ Exemples :
 - `profil-eleve.php`
 - `$projectName`
 - `ROLE_ADMIN`
+
+## Extension applicative — application mobile Light of Knowledge (V mobile élève)
+
+### Objectif et périmètre
+
+Une application **Flutter/Dart native multiplateforme** est prévue pour les élèves, en complément de la plateforme Web. Elle doit offrir un parcours élève réellement utilisable, avec des données synchronisées, et non une simple copie statique des pages HTML. Android sera la cible prioritaire ; iOS reste conditionné aux outils et aux possibilités de test.
+
+### Fonctionnalités mobiles attendues
+
+1. Catalogue des formations : titres, descriptions, tarifs existants (300 €, 350 € et cours gratuit), détails et conditions d'accès.
+2. Inscription à un compte et connexion sécurisée ; déconnexion et gestion des erreurs courantes.
+3. Tableau de bord de l'élève avec ses formations et ses inscriptions.
+4. Accès aux cours et leçons uniquement selon les droits : option 1, option 2, cours gratuit, sans ajouter de rôle « élève payant ».
+5. Consultation de ressources pédagogiques compatibles (texte, documents et liens vers les replays/cours) ; pas d'hébergement vidéo complexe imposé.
+6. Suivi de progression : leçons terminées et progression par formation, enregistrées côté serveur et retrouvées sur le Web et le mobile.
+7. Gestion des états usuels : chargement, absence de données, erreurs réseau, accès refusé et session expirée.
+
+### Rôles et interfaces
+
+L'application mobile est **centrée sur le rôle `eleve`**. Les tableaux de bord professeur et administrateur demeurent sur le Web ; il n'est pas nécessaire de les reproduire dans Flutter pour que le parcours élève soit complet. Un administrateur peut également être professeur, conformément aux règles existantes.
+
+### Architecture et sécurité
+
+- Client Flutter → **API PHP sécurisée** (échanges JSON via HTTPS en environnement distant) → services métier PHP → MySQL/MariaDB.
+- **Une base de données commune** et des droits d'accès vérifiés côté serveur, indépendamment des écrans mobiles.
+- Authentification adaptée à un client mobile, mots de passe hachés, validation des entrées, accès limité aux ressources autorisées ; aucun identifiant de base de données dans l'application Flutter.
+- Prévoir des tests de synchronisation Web/mobile, de refus d'accès aux cours non autorisés, de gestion des erreurs et de progression.
+- Utiliser uniquement des données de démonstration ou des contenus dont l'utilisation est autorisée.
+
+### Critères de réception de l'extension mobile
+
+Un compte élève fictif peut se connecter depuis le mobile, retrouver ses inscriptions, consulter une leçon autorisée, enregistrer sa progression, puis constater la même progression depuis le Web. Un élève non inscrit ne peut pas accéder à une formation protégée, même en modifiant une requête.
+
+### Ordre et état de réalisation
+
+**À développer, non réalisé :** d'abord base et parcours Web PHP, ensuite API et tests, puis Flutter après les leçons Dart/Flutter du programme Studi, enfin tests croisés et documentation. Les fonctionnalités V3/V4 du site (examens, travaux, communication, automatisations) ne sont pas rendues obligatoires dans la version mobile BTS. Voir `feuille-de-route-mobile.md`.
