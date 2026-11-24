@@ -52,12 +52,12 @@ Le projet est organisé en plusieurs versions.
 * mise en page responsive ;
 * navigation entre les pages ;
 * formulaires front-end ;
-* définition initiale des rôles utilisateurs.
+* définition initiale des rôles utilisateurs ;
+* schéma MariaDB V1 réalisé et testé dans phpMyAdmin.
 
 Éléments restant à développer progressivement :
 
 * traitement PHP des formulaires ;
-* base de données ;
 * authentification ;
 * gestion des inscriptions aux formations ;
 * contrôle des droits d'accès ;
@@ -132,7 +132,7 @@ Les formulaires d'inscription et de connexion sont pour l'instant uniquement des
 
 ### MVP applicatif visé (à développer)
 
-1. **Persistance :** créer le schéma MySQL nécessaire pour les comptes, formations et inscriptions.
+1. **Persistance :** schéma MariaDB V1 réalisé pour les comptes, rôles, formations et inscriptions. Tests SQL 1 à 8 et réimportation sans doublon validés dans phpMyAdmin. [Fiche de validation SQL](preuves/sql-validation.md)
 2. **Traitements serveur :** connecter les formulaires au back-end PHP, valider les données et mettre en place l'authentification et les sessions.
 3. **Droits d'accès :** gérer les inscriptions et distinguer les accès aux formations gratuites et payantes selon les droits des élèves, sans multiplier artificiellement les rôles.
 4. **Qualité et preuves :** documenter l'installation, vérifier les principaux scénarios par des tests et conserver des captures de l'application réellement fonctionnelle.

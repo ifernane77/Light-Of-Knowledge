@@ -75,7 +75,16 @@ Cette adresse affiche actuellement la page de test `index.php` placée à la rac
 
 MySQL est disponible dans l'environnement local via Laragon.
 
-La base de données applicative et les traitements associés seront intégrés ultérieurement au rythme des notions étudiées et des besoins du projet.
+Le schéma MariaDB V1 a été importé et testé dans phpMyAdmin avec XAMPP. Le traitement PHP des formulaires et leur connexion à la base restent à développer.
+
+### Import de la base de démonstration MariaDB V1 avec XAMPP
+
+1. Démarrer **Apache** et **MySQL** (MariaDB) dans le panneau XAMPP, puis ouvrir phpMyAdmin sur `http://localhost/phpmyadmin/`.
+2. Si `light_of_knowledge` existe déjà, comparer les tables concernées avec le schéma V1 avant l'import. En cas d'écart, arrêter l'import. `CREATE TABLE IF NOT EXISTS` ne corrige pas une table existante. Pour retrouver les résultats attendus de la démonstration, utiliser une base locale dédiée initialement vide.
+3. Depuis l'accueil de phpMyAdmin, ouvrir l'onglet **Importer**, choisir l'encodage UTF-8 et importer [01-schema.sql](sql/01-schema.sql). Ce fichier crée et sélectionne la base `light_of_knowledge`.
+4. Sélectionner `light_of_knowledge` et importer [02-donnees-fictives.sql](sql/02-donnees-fictives.sql), réservé aux tests locaux.
+5. Exécuter les requêtes de [03-tests.sql](sql/03-tests.sql) dans l'onglet **SQL** et noter les cinq compteurs du test 8. Réimporter les fichiers 01 puis 02 sans effacer la base et relancer les tests 1 à 8. Les compteurs et les résultats doivent rester identiques.
+6. Exécuter les exemples négatifs du test 9 un par un, uniquement sur la base de démonstration. Renseigner [la fiche de validation](preuves/sql-validation.md) avec les résultats observés.
 
 ## Formulaires
 

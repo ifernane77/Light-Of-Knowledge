@@ -89,3 +89,11 @@ Ces deux espaces ne correspondent pas à deux rôles différents, mais à des ni
 La première version de l'interface publique HTML/CSS est opérationnelle et responsive.
 
 Les formulaires sont encore statiques et ne sont pas reliés à une base de données. Le traitement PHP, l'authentification, la gestion des inscriptions et les tableaux de bord seront développés plus tard, au rythme des notions étudiées.
+
+---
+
+## 24 novembre 2026 — Validation de la base MariaDB V1
+
+Le schéma a été importé et testé dans phpMyAdmin. Les cinq tables et les quatre clés étrangères sont présentes. Les tests 1 à 8 et la réimportation sans doublon ont été vérifiés. Le doublon de rôle a renvoyé `#1062` et l'étudiant a confirmé l'erreur `#1452` pour une inscription avec un utilisateur inexistant. [Fiche de validation SQL](preuves/sql-validation.md)
+
+Le traitement PHP des formulaires, l'authentification et les droits d'accès restent à développer. L'API PHP et Flutter sont prévus ultérieurement.
