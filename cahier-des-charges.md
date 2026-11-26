@@ -112,7 +112,7 @@ La première interface publique est réalisée en HTML et CSS avec :
 * une identité graphique cohérente ;
 * les premières règles métier visibles sur les formations et les tarifs.
 
-Le traitement PHP des formulaires, la base de données, l'authentification et les tableaux de bord restent à développer.
+Le schéma MariaDB V1 est réalisé et testé depuis le 24 novembre 2026. Le traitement PHP des formulaires, l'authentification et les tableaux de bord restent à développer.
 
 ## Conventions de développement
 
@@ -171,4 +171,19 @@ Un compte élève fictif peut se connecter depuis le mobile, retrouver ses inscr
 
 ### Ordre et état de réalisation
 
-**À développer, non réalisé :** d'abord base et parcours Web PHP, ensuite API et tests, puis Flutter après les leçons Dart/Flutter du programme Studi, enfin tests croisés et documentation. Les fonctionnalités V3/V4 du site (examens, travaux, communication, automatisations) ne sont pas rendues obligatoires dans la version mobile BTS. Voir `feuille-de-route-mobile.md`.
+**À développer, non réalisé :** d'abord connexion PDO à la base MariaDB V1 validée et parcours Web PHP, ensuite API et tests, puis Flutter après les leçons Dart/Flutter du programme Studi, enfin tests croisés et documentation. Les fonctionnalités V3/V4 du site (examens, travaux, communication, automatisations) ne sont pas rendues obligatoires dans la version mobile BTS. Voir `feuille-de-route-mobile.md`.
+
+
+## Extension cible — plateforme internationale (proposition à valider)
+
+Le MVP E6 reste prioritaire et distinct de la version de production destinée à l'association. Les fonctionnalités suivantes sont prévues, non réalisées :
+
+- Interface bilingue français/anglais, choix visible à l'accueil et modifiable dans les paramètres ; sections francophone et anglophone sur une plateforme commune.
+- Objectif initial : 100 élèves, 10 professeurs, plusieurs classes par professeur (6 à 7 à titre indicatif), jusqu'à 5 cours simultanés sous réserve de tests de charge.
+- Tableau de bord professeur : classes attribuées, planning, lancement des cours, ressources et replays ; élèves : accès aux seules classes autorisées ; administration : gestion des comptes, classes et inscriptions, y compris inscription manuelle des élèves payant en espèces.
+- BigBlueButton auto-hébergé sur un serveur distinct, intégration via API côté serveur, cours en direct sans abonnement Zoom, enregistrements et stockage des replays maîtrisés par l'association.
+- Stripe Checkout/Billing et webhooks sécurisés : carte récurrente, SEPA en EUR et Bacs en GBP selon éligibilité ; compte Stripe au nom de l'association britannique, versements sur son compte bancaire. Frais de transaction et conversion à confirmer. Aucun stockage des données de carte dans l'application.
+- Infrastructure envisagée : VPS applicatif et VPS BigBlueButton OVHcloud, HTTPS, sauvegardes externes chiffrées, contrôle des accès, surveillance et tests de restauration. Dimensionnement BBB, stockage et bande passante à valider avant production ; serveur dédié si croissance importante.
+- Budget cible de fonctionnement : 550 €/an (45,83 €/mois), non contractuel, hors commissions de paiement, publication sur les stores et maintenance rémunérée. Hébergement de la première année proposé gratuitement à l'association ; années suivantes à sa charge, tarifs révisables selon usage et prix fournisseurs.
+
+Ordre de réalisation : actualiser les besoins et modèles UML/SQL ; connecter PHP à MariaDB via PDO ; inscription, authentification et droits ; tableaux de bord et parcours pédagogique ; API sécurisée et Flutter élève ; intégrations BBB et Stripe ; tests et recette avant production. Prévoir le bilinguisme et la sécurité dès la conception. Réaliser un prototype BBB et des tests de charge avant de confirmer le budget.
