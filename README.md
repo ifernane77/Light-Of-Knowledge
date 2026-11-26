@@ -98,7 +98,7 @@ Technologies et outils actuellement utilisés ou préparés :
 * HTML5 ;
 * CSS3 ;
 * PHP 8.3.16 ;
-* MySQL 8.4.3 via Laragon ;
+* MariaDB via XAMPP/phpMyAdmin (schéma V1 validé) ; MySQL 8.4.3 via Laragon utilisé initialement ;
 * Git ;
 * GitHub ;
 * Visual Studio Code.
@@ -141,8 +141,23 @@ Les tableaux de bord complets, les cours, les replays et les fonctions avancées
 
 ## Extension cible — application mobile Flutter (élève)
 
-Après stabilisation du socle Web PHP/MySQL et des API, une **application mobile Flutter/Dart** complète sur le périmètre **élève** sera développée pour Android (iOS envisageable selon l'environnement disponible). Elle partagera les comptes, inscriptions, droits d'accès, cours et progressions avec le site Web, via une **API PHP sécurisée** et une base commune. Elle ne sera pas un simple site dans une WebView.
+Après stabilisation du socle Web PHP/MariaDB et des API, une **application mobile Flutter/Dart** complète sur le périmètre **élève** sera développée pour Android (iOS envisageable selon l'environnement disponible). Elle partagera les comptes, inscriptions, droits d'accès, cours et progressions avec le site Web, via une **API PHP sécurisée** et une base commune. Elle ne sera pas un simple site dans une WebView.
 
 **Parcours mobile cible :** découvrir les formations → créer un compte / se connecter → consulter les inscriptions et droits → accéder aux cours autorisés → lire les leçons et ressources compatibles → marquer une leçon comme terminée → retrouver sa progression synchronisée. Les formations payantes respectent les droits d'inscription ; aucun paiement mobile intégré n'est requis pour le périmètre BTS. Les fonctions professeur/administrateur, examens, remise de devoirs, notifications et messagerie restent principalement Web ou ultérieures.
 
-**Statut :** Flutter, API, authentification, base de données et progression ne sont **pas encore réalisés**. Le développement sera engagé après les cours Studi correspondants et un MVP Web opérationnel. Voir [feuille de route mobile](feuille-de-route-mobile.md). Cette extension complète la seconde réalisation E6, sans constituer une troisième réalisation indépendante.
+**Statut :** Le schéma MariaDB V1 est validé ; Flutter, API, authentification et progression ne sont **pas encore réalisés**. Le développement sera engagé après les cours Studi correspondants et un MVP Web opérationnel. Voir [feuille de route mobile](feuille-de-route-mobile.md). Cette extension complète la seconde réalisation E6, sans constituer une troisième réalisation indépendante.
+
+
+## Extension cible — plateforme internationale (proposition à valider)
+
+Le MVP E6 reste prioritaire et distinct de la version de production destinée à l'association. Les fonctionnalités suivantes sont prévues, non réalisées :
+
+- Interface bilingue français/anglais, choix visible à l'accueil et modifiable dans les paramètres ; sections francophone et anglophone sur une plateforme commune.
+- Objectif initial : 100 élèves, 10 professeurs, plusieurs classes par professeur (6 à 7 à titre indicatif), jusqu'à 5 cours simultanés sous réserve de tests de charge.
+- Tableau de bord professeur : classes attribuées, planning, lancement des cours, ressources et replays ; élèves : accès aux seules classes autorisées ; administration : gestion des comptes, classes et inscriptions, y compris inscription manuelle des élèves payant en espèces.
+- BigBlueButton auto-hébergé sur un serveur distinct, intégration via API côté serveur, cours en direct sans abonnement Zoom, enregistrements et stockage des replays maîtrisés par l'association.
+- Stripe Checkout/Billing et webhooks sécurisés : carte récurrente, SEPA en EUR et Bacs en GBP selon éligibilité ; compte Stripe au nom de l'association britannique, versements sur son compte bancaire. Frais de transaction et conversion à confirmer. Aucun stockage des données de carte dans l'application.
+- Infrastructure envisagée : VPS applicatif et VPS BigBlueButton OVHcloud, HTTPS, sauvegardes externes chiffrées, contrôle des accès, surveillance et tests de restauration. Dimensionnement BBB, stockage et bande passante à valider avant production ; serveur dédié si croissance importante.
+- Budget cible de fonctionnement : 550 €/an (45,83 €/mois), non contractuel, hors commissions de paiement, publication sur les stores et maintenance rémunérée. Hébergement de la première année proposé gratuitement à l'association ; années suivantes à sa charge, tarifs révisables selon usage et prix fournisseurs.
+
+Ordre de réalisation : actualiser les besoins et modèles UML/SQL ; connecter PHP à MariaDB via PDO ; inscription, authentification et droits ; tableaux de bord et parcours pédagogique ; API sécurisée et Flutter élève ; intégrations BBB et Stripe ; tests et recette avant production. Prévoir le bilinguisme et la sécurité dès la conception. Réaliser un prototype BBB et des tests de charge avant de confirmer le budget.
