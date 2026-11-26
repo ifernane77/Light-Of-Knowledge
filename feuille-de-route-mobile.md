@@ -4,13 +4,13 @@
 
 Développer, **après la stabilisation du socle Web**, une application mobile Flutter/Dart complète sur le **parcours élève**. Le site Web et le mobile constituent deux interfaces d'une même réalisation professionnelle, avec une API PHP et une base MySQL/MariaDB communes.
 
-**État au 19/11/2026 :** seuls les prototypes publics HTML/CSS du site sont opérationnels. Le back-end PHP, la base applicative, l'API et l'application Flutter ne sont pas développés. Les tâches ci-dessous sont des objectifs, pas des réalisations acquises.
+**État au 26/11/2026 :** les interfaces publiques HTML/CSS sont opérationnelles et le schéma MariaDB V1 a été validé le 24/11. Le back-end PHP, la connexion PDO, l'API et Flutter ne sont pas développés. Les tâches ci-dessous sont des objectifs, pas des réalisations acquises.
 
 ## Phases et dépendances
 
 | Phase | Livrables | Statut | Prérequis |
 |---|---|---|---|
-| 1 — Socle Web | Schéma SQL, comptes, formations, inscriptions, sessions PHP, droits gratuits/payants | À faire | Leçons SQL et PHP |
+| 1 — Socle Web | Schéma SQL, comptes, formations, inscriptions, sessions PHP, droits gratuits/payants | En cours : SQL V1 validé, PHP à faire | Leçons SQL et PHP |
 | 2 — Parcours pédagogique Web | Catalogue dynamique, tableau de bord élève, cours/leçons et progression persistante | À faire | Phase 1 |
 | 3 — API partagée | Endpoints JSON sécurisés : connexion, formations, inscriptions, leçons, progression ; tests des droits | À faire | Phases 1–2, cours API |
 | 4 — Client Flutter | Navigation, connexion, catalogue, mes formations, cours/leçons, progression, états d'erreur | À faire | Phase 3 et cours Dart/Flutter |
@@ -44,3 +44,6 @@ Aucune date arbitraire n'est fixée : renseigner les dates prévues **avant** de
 ## Règle pédagogique
 
 Ne pas implémenter une notion avant de l'avoir étudiée dans Studi. Priorité au fonctionnement de la plateforme Web et de l'API avant le développement mobile. Adapter le périmètre si le calendrier avant l'E6 2027 l'exige, sans annoncer de fonctionnalités non réalisées.
+
+
+L'extension internationale (FR/EN, BBB, Stripe) est décrite dans le [cahier des charges](cahier-des-charges.md) et ne constitue pas une obligation du MVP mobile E6. Prévoir l'internationalisation dès la conception des interfaces.
