@@ -97,3 +97,10 @@ Les formulaires sont encore statiques et ne sont pas reliés à une base de donn
 Le schéma a été importé et testé dans phpMyAdmin. Les cinq tables et les quatre clés étrangères sont présentes. Les tests 1 à 8 et la réimportation sans doublon ont été vérifiés. Le doublon de rôle a renvoyé `#1062` et l'étudiant a confirmé l'erreur `#1452` pour une inscription avec un utilisateur inexistant. [Fiche de validation SQL](preuves/sql-validation.md)
 
 Le traitement PHP des formulaires, l'authentification et les droits d'accès restent à développer. L'API PHP et Flutter sont prévus ultérieurement.
+
+
+---
+
+## 26 novembre 2026 — Actualisation documentaire et périmètre cible
+
+Le schéma MariaDB V1 reste validé. La documentation distingue le MVP E6 de la proposition de plateforme internationale : bilinguisme, classes simultanées, BigBlueButton auto-hébergé, replays, Stripe, inscriptions manuelles et budget cible de 550 €/an. Ces extensions ne sont pas implémentées et restent à valider avec l'association. Prochaine étape technique : connexion PHP/MariaDB via PDO, puis traitement des formulaires et authentification. Aucun changement du code applicatif ou du schéma SQL lors de cette actualisation.
