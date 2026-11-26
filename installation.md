@@ -5,7 +5,7 @@
 Pour exécuter le projet en local, les outils suivants sont nécessaires :
 
 * PHP
-* MySQL
+* MariaDB (XAMPP) ou environnement MySQL compatible
 * Laragon ou XAMPP
 * Git
 * Visual Studio Code
@@ -73,7 +73,7 @@ Cette adresse affiche actuellement la page de test `index.php` placée à la rac
 
 ## Base de données
 
-MySQL est disponible dans l'environnement local via Laragon.
+MySQL via Laragon correspond à l'environnement initial. La référence actuelle pour le schéma V1 est MariaDB via XAMPP/phpMyAdmin.
 
 Le schéma MariaDB V1 a été importé et testé dans phpMyAdmin avec XAMPP. Le traitement PHP des formulaires et leur connexion à la base restent à développer.
 
@@ -92,7 +92,7 @@ Les formulaires d'inscription et de connexion présents dans `public/` sont actu
 
 Ils utilisent encore `action="#"` et ne sont donc pas reliés à un traitement PHP ni à une base de données.
 
-## Environnement local utilisé
+## Environnement local initial (historique)
 
 - PHP 8.3.16
 - MySQL 8.4.3
@@ -101,6 +101,8 @@ Ils utilisent encore `action="#"` et ne sont donc pas reliés à un traitement P
 - Git
 - GitHub
 - Navigateur web
+
+L'environnement de validation SQL actuel utilise XAMPP et MariaDB ; vérifier les versions locales avant de configurer PDO.
 
 ## Sauvegarde du projet
 
